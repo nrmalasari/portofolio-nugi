@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter Tight", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, "Times New Roman", serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ===== Palet baru: Midnight Indigo + Violet/Cyan ===== */
+  --color-paper: #f5f6fc;      /* latar terang (kebiruan lembut) */
+  --color-paper-2: #e9ebf7;    /* latar section terang ke-2 */
+  --color-ink: #0d1021;        /* latar gelap (navy tua) */
+  --color-accent: #7c5cff;     /* violet utama */
+  --color-accent-2: #22d3ee;   /* cyan pendamping */
+  --color-accent-soft: #ece8ff;
+
+  /* abu-abu netral -> abu-abu kebiruan, supaya semua text-gray-* ikut selaras */
+  --color-gray-50: #f7f8fc;
+  --color-gray-100: #eceef7;
+  --color-gray-200: #dfe2ef;
+  --color-gray-300: #c5cadc;
+  --color-gray-400: #8f95b2;
+  --color-gray-500: #6a7091;
+  --color-gray-600: #4e5474;
+  --color-gray-700: #3a3f5c;
+  --color-gray-800: #232743;
+  --color-gray-900: #141731;
+
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-float: float 7s ease-in-out infinite;
+  --animate-nudge: nudge 1.8s ease-in-out infinite;
+
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+  @keyframes nudge { 0%, 100% { transform: translateY(0); opacity: .9; } 50% { transform: translateY(5px); opacity: .35; } }
+}
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+::selection { background: var(--color-accent); color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
