@@ -3,7 +3,7 @@
 // ======================================================
 export const profile = {
   name: 'Nugi',
-  handle: '@nugi',
+  handle: '@Muhammad Nugi Ramadhan',
   roles: ['QA Engineer and AI Engineer'], // boleh lebih dari satu, nanti diketik bergantian
   location: 'South Jakarta · Indonesia',
   city: 'Jakarta, ID',
