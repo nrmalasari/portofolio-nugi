@@ -19,7 +19,7 @@ export const certificates = [
     issuer: 'CertNexus · Sertifikasi Internasional',
     date: '2024-12',
     category: 'Internasional',
-    credential: '',
+    credential: 'https://certifications.certnexus.com/5838c2d4-b13a-44cb-8831-7f6eeddf0189#acc.Zb5kyUMt',
     url: 'https://www.certnexus.com',
     image: '/images/certnexus-data-science-biz.jpg',
     featured: true,
