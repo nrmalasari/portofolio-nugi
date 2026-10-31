@@ -55,7 +55,7 @@ const Contact = () => {
       </div>
 
       <p className="absolute bottom-5 px-5 text-center font-mono text-[8px] uppercase tracking-[0.2em] text-white/20 md:bottom-6 md:text-[9px]">
-        © MC {new Date().getFullYear()} {profile.name} ♡ Nugi. All rights reserved.
+        © {new Date().getFullYear()} {profile.name} ♡ MC . All rights reserved.
       </p>
     </section>
   )
