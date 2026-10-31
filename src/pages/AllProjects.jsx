@@ -15,33 +15,33 @@ const AllProjects = () => {
 
   return (
     <main>
-      <section className="relative overflow-hidden bg-paper px-6 pb-28 pt-36 md:px-12 lg:px-[clamp(48px,8vw,120px)]">
-        <h2 aria-hidden="true" className="pointer-events-none absolute right-[4vw] top-24 select-none font-display text-[18vw] font-bold leading-none tracking-tighter text-ink/[0.05] blur-[4px]">
+      <section className="relative overflow-hidden bg-paper px-5 pb-20 pt-28 sm:px-6 md:px-12 md:pb-24 md:pt-32 lg:px-[clamp(48px,8vw,120px)]">
+        <h2 aria-hidden="true" className="pointer-events-none absolute right-[4vw] top-20 select-none font-display text-[16vw] md:top-24 md:text-[14vw] font-bold leading-none tracking-tighter text-ink/[0.05] blur-[4px]">
           WORK
         </h2>
 
-        <div className="relative mx-auto max-w-[1400px]">
+        <div className="relative mx-auto max-w-[1200px]">
           <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-ink/40">Project Index / {pad(projects.length)}</p>
-          <h1 className="mt-4 font-display text-[clamp(3.4rem,9vw,8rem)] font-semibold leading-[0.95] tracking-[-0.05em]">All projects.</h1>
-          <p className="mt-6 max-w-[52ch] text-[13px] leading-relaxed text-ink/55">
+          <h1 className="mt-3 font-display text-[clamp(2.4rem,6.2vw,5rem)] font-semibold leading-[0.97] tracking-[-0.05em] md:mt-4">All projects.</h1>
+          <p className="mt-4 max-w-[52ch] text-[12px] leading-relaxed text-ink/55 md:mt-6 md:text-[13px]">
             A growing archive of digital products, internal systems, and web experiences — from interface craft to fullstack delivery.
           </p>
           <a href={profile.socials.github} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-1.5 border-b border-ink/40 pb-0.5 font-mono text-[8px] font-bold uppercase tracking-[0.22em]">
             Open project archive <ArrowUpRight className="h-2.5 w-2.5" />
           </a>
 
-          <div className="mt-16 border-t border-ink/10 pt-6">
+          <div className="mt-10 border-t border-ink/10 pt-5 md:mt-14 md:pt-6">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="font-mono text-[8px] uppercase tracking-[0.3em] text-ink/40">Filter by discipline</p>
-                <div className="mt-3 flex flex-wrap gap-2.5">
+                <div className="mt-3 flex flex-wrap gap-2 md:gap-2.5">
                   {['all', ...disciplines].map((d) => {
                     const on = filter === d
                     return (
                       <button
                         key={d}
                         onClick={() => setFilter(d)}
-                        className={`rounded-full border px-4 py-2 font-mono text-[8px] font-bold uppercase tracking-[0.18em] transition ${on ? 'border-ink bg-ink text-white' : 'border-ink/10 bg-white/50 text-ink/60 hover:border-ink/40'}`}
+                        className={`rounded-full border px-3 py-1.5 font-mono text-[8px] font-bold uppercase tracking-[0.16em] transition md:px-4 md:py-2 md:tracking-[0.18em] ${on ? 'border-ink bg-ink text-white' : 'border-ink/10 bg-white/50 text-ink/60 hover:border-ink/40'}`}
                       >
                         {d === 'all' ? 'All projects' : d}
                         <span className={`ml-2 ${on ? 'text-white/50' : 'text-ink/30'}`}>{pad(d === 'all' ? projects.length : count(d))}</span>
@@ -54,7 +54,7 @@ const AllProjects = () => {
             </div>
           </div>
 
-          <div key={filter} className="mt-12 grid gap-x-10 gap-y-14 md:grid-cols-2">
+          <div key={filter} className="mt-8 grid gap-x-8 gap-y-10 sm:grid-cols-2 md:mt-12 md:gap-x-10 md:gap-y-12">
             {list.map((p, i) => (
               <Link key={p.slug} to={`/projects/${p.slug}`} className="group block">
                 <div className="relative aspect-[16/10] overflow-hidden rounded-md bg-white">
@@ -68,9 +68,9 @@ const AllProjects = () => {
                     <ArrowUpRight className="h-3.5 w-3.5" />
                   </span>
                 </div>
-                <p className="mt-5 font-mono text-[8px] uppercase tracking-[0.22em] text-ink/40">{pad(i + 1)} / {p.role}</p>
-                <h3 className="mt-2 text-xl font-semibold tracking-tight md:text-2xl">{p.title}</h3>
-                <p className="mt-2 max-w-[56ch] text-[12px] leading-relaxed text-ink/50">{p.summary}</p>
+                <p className="mt-4 font-mono text-[8px] uppercase tracking-[0.2em] text-ink/40 md:mt-5">{pad(i + 1)} / {p.role}</p>
+                <h3 className="mt-2 text-lg font-semibold tracking-tight md:text-xl">{p.title}</h3>
+                <p className="mt-2 max-w-[56ch] text-[11px] leading-relaxed text-ink/50 md:text-[12px]">{p.summary}</p>
               </Link>
             ))}
           </div>

@@ -22,12 +22,12 @@ const Contact = () => {
     ['Instagram', profile.socials.instagram],
   ]
   return (
-    <section id="contact" className="relative z-30 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-ink px-6 py-28 text-center text-white">
-      <h2 aria-hidden="true" className="pointer-events-none absolute inset-0 flex select-none items-center justify-center font-display text-[22vw] font-bold leading-none tracking-tighter text-white/[0.04] blur-[5px]">
+    <section id="contact" className="relative z-30 flex min-h-screen w-full flex-col items-center justify-center overflow-hidden bg-ink px-5 py-24 text-center text-white md:px-6">
+      <h2 aria-hidden="true" className="pointer-events-none absolute inset-0 flex select-none items-center justify-center font-display text-[18vw] font-bold leading-none tracking-tighter text-white/[0.04] blur-[5px]">
         CONTACT
       </h2>
 
-      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[520px] w-[520px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/25 blur-[140px]" />
+      <div aria-hidden="true" className="pointer-events-none absolute left-1/2 top-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/25 blur-[110px] md:h-[440px] md:w-[440px] md:blur-[140px]" />
 
       <div className="relative z-10 flex flex-col items-center">
         <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-white/35">Get in touch</p>
@@ -35,15 +35,15 @@ const Contact = () => {
           {profile.city} / {time} WIB
         </p>
 
-        <h3 className="mt-14 font-display text-[clamp(3rem,8.4vw,8rem)] font-semibold uppercase leading-[0.92] tracking-[-0.05em]">
+        <h3 className="mt-10 font-display text-[clamp(2.2rem,5.8vw,5rem)] font-semibold uppercase leading-[0.95] tracking-[-0.05em] md:mt-12">
           Let&apos;s work<br />together
         </h3>
 
-        <a href={`mailto:${profile.email}`} className="mt-12 flex items-center gap-2 text-base text-white/80 transition hover:text-accent-2 md:text-lg">
+        <a href={`mailto:${profile.email}`} className="mt-8 flex max-w-full items-center gap-2 break-all text-sm text-white/80 transition hover:text-accent-2 md:mt-10 md:text-base">
           {profile.email} <ArrowUpRight className="h-3.5 w-3.5" />
         </a>
 
-        <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
+        <ul className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 md:mt-8 md:gap-x-8">
           {links.map(([label, href]) => (
             <li key={label}>
               <a href={href} target="_blank" rel="noreferrer" className="font-mono text-[9px] uppercase tracking-[0.25em] text-white/40 transition hover:text-white">
@@ -54,7 +54,7 @@ const Contact = () => {
         </ul>
       </div>
 
-      <p className="absolute bottom-6 font-mono text-[9px] uppercase tracking-[0.2em] text-white/20">
+      <p className="absolute bottom-5 px-5 text-center font-mono text-[8px] uppercase tracking-[0.2em] text-white/20 md:bottom-6 md:text-[9px]">
         © {new Date().getFullYear()} {profile.name}. All rights reserved.
       </p>
     </section>

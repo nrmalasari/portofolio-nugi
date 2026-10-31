@@ -151,13 +151,13 @@ export const projects = [
         mock: { hue: 210, variant: 0 },
       },
       {
-        src: '',
+        src: '/images/proj-flightmood-2.png',
         caption: 'EDA',
         desc: 'Sentiment distribution and tweet length analysis.',
         mock: { hue: 30, variant: 2 },
       },
       {
-        src: '',
+        src: '/images/proj-flightmood-3.png',
         caption: 'Live Prediction',
         desc: 'Example sentences classified as negative and positive.',
         mock: { hue: 170, variant: 1 },

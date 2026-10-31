@@ -40,15 +40,15 @@ const Navbar = () => {
   }
 
   const linkCls = ({ isActive }) =>
-    `border-b pb-0.5 font-mono text-[10px] font-bold uppercase tracking-[0.18em] transition ${isActive ? 'border-ink text-ink' : 'border-transparent text-ink/45 hover:text-ink'}`
+    `border-b pb-0.5 font-mono text-[9px] font-bold uppercase tracking-[0.16em] transition md:text-[10px] md:tracking-[0.18em] ${isActive ? 'border-ink text-ink' : 'border-transparent text-ink/45 hover:text-ink'}`
 
   return (
     <>
       <header className={`fixed inset-x-0 top-0 z-50 transition-transform duration-500 ${hidden && !open ? '-translate-y-full' : 'translate-y-0'}`}>
-        <div className={`flex items-center justify-between px-6 py-5 transition-[background-color,backdrop-filter] duration-300 md:px-10 md:py-6 ${scrolled ? 'bg-paper/75 backdrop-blur-md' : ''}`}>
-          <Link to="/" className="flex items-center gap-3" aria-label="Home">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-2 pb-0.5 font-serif text-lg italic text-white">{profile.name[0].toLowerCase()}</span>
-            <span className="rounded-full bg-white/50 px-3 py-1 font-mono text-[9px] font-bold uppercase tracking-[0.18em] text-ink/80">
+        <div className={`flex items-center justify-between px-4 py-3 transition-[background-color,backdrop-filter] duration-300 sm:px-6 md:px-10 md:py-4 ${scrolled ? 'bg-paper/75 backdrop-blur-md' : ''}`}>
+          <Link to="/" className="flex items-center gap-2 md:gap-3" aria-label="Home">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-accent to-accent-2 pb-0.5 font-serif text-base italic text-white md:h-8 md:w-8 md:text-lg">{profile.name[0].toLowerCase()}</span>
+            <span className="rounded-full bg-white/50 px-2.5 py-1 font-mono text-[8px] font-bold uppercase tracking-[0.16em] text-ink/80 md:px-3 md:text-[9px] md:tracking-[0.18em]">
               {profile.name} / Portfolio
             </span>
           </Link>
@@ -56,12 +56,12 @@ const Navbar = () => {
           {isHome ? (
             <button
               onClick={() => setOpen(true)}
-              className="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.15em] shadow-sm transition hover:shadow-md"
+              className="flex items-center gap-1.5 rounded-full border border-gray-200 bg-white px-4 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.15em] shadow-sm transition hover:shadow-md md:gap-2 md:px-5 md:py-2 md:text-[10px]"
             >
               Menu <span className="text-lg font-light leading-none text-gray-400">+</span>
             </button>
           ) : (
-            <nav className="flex items-center gap-7">
+            <nav className="flex items-center gap-5 md:gap-7">
               <NavLink to="/" end className={linkCls}>Home</NavLink>
               <NavLink to="/projects" className={linkCls}>Projects</NavLink>
             </nav>

@@ -36,8 +36,8 @@ const HoloCard = ({
       >
         <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,#2b2f5c_0%,#10132a_60%,#080a18_100%)]" />
 
-        <span className="pointer-events-none absolute left-[7%] top-[16%] select-none font-mono text-4xl text-white/10">&lt;/&gt;</span>
-        <span className="pointer-events-none absolute right-[7%] top-[12%] select-none font-mono text-4xl text-white/10">&lt;/&gt;</span>
+        <span className="pointer-events-none absolute left-[7%] top-[16%] select-none font-mono text-2xl text-white/10 md:text-4xl">&lt;/&gt;</span>
+        <span className="pointer-events-none absolute right-[7%] top-[12%] select-none font-mono text-2xl text-white/10 md:text-4xl">&lt;/&gt;</span>
 
         {failed ? (
           <div className="absolute inset-x-0 bottom-0 top-[14%] flex flex-col items-center justify-end">
@@ -70,10 +70,10 @@ const HoloCard = ({
           }}
         />
 
-        <div className="absolute inset-x-4 bottom-4 flex items-center justify-between rounded-xl border border-white/10 bg-black/40 px-4 py-3 backdrop-blur-md">
+        <div className="absolute inset-x-3 bottom-3 flex items-center justify-between rounded-xl border border-white/10 bg-black/40 px-3 py-2 backdrop-blur-md md:inset-x-4 md:bottom-4 md:px-4 md:py-3">
           <div>
-            <p className="text-sm font-semibold text-white">{name}</p>
-            <p className="text-[11px] text-gray-300">{status}</p>
+            <p className="text-xs font-semibold text-white md:text-sm">{name}</p>
+            <p className="text-[10px] text-gray-300 md:text-[11px]">{status}</p>
           </div>
           <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-accent-2 shadow-[0_0_10px_rgba(34,211,238,0.9)]" />
         </div>

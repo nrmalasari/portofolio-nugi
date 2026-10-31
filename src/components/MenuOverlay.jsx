@@ -40,7 +40,7 @@ const MenuOverlay = ({ open, onClose, onSelect }) => {
           <div className="absolute inset-0 bg-black/20 backdrop-blur-md" onClick={onClose} />
 
           <motion.nav
-            className="absolute inset-y-0 right-0 flex w-full flex-col justify-center bg-ink bg-[radial-gradient(90%_70%_at_100%_0%,rgba(124,92,255,0.22),transparent_60%)] px-8 text-white md:w-[53%] md:px-16"
+            className="absolute inset-y-0 right-0 flex w-full flex-col justify-center overflow-y-auto bg-ink bg-[radial-gradient(90%_70%_at_100%_0%,rgba(124,92,255,0.22),transparent_60%)] px-6 py-20 text-white sm:px-10 md:w-[46%] md:px-14 lg:w-[40%]"
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
@@ -48,7 +48,7 @@ const MenuOverlay = ({ open, onClose, onSelect }) => {
           >
             <button
               onClick={onClose}
-              className="absolute right-6 top-6 flex items-center gap-2 rounded-full bg-paper px-5 py-2 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-ink shadow-sm transition hover:bg-white md:right-10 md:top-8"
+              className="absolute right-4 top-3 flex items-center gap-1.5 rounded-full bg-paper px-4 py-1.5 font-mono text-[9px] font-bold uppercase tracking-[0.15em] text-ink shadow-sm transition hover:bg-white sm:right-6 md:right-10 md:top-4 md:gap-2 md:px-5 md:py-2 md:text-[10px]"
             >
               Close <Close />
             </button>
@@ -58,7 +58,7 @@ const MenuOverlay = ({ open, onClose, onSelect }) => {
                 <li key={item.label} className="relative overflow-hidden">
                   <motion.button
                     onClick={() => onSelect(item)}
-                    className="block py-[0.1em] text-left font-display text-[clamp(2.4rem,6.2vw,5rem)] font-semibold uppercase leading-[1.02] tracking-tighter transition-[opacity,transform] duration-300 hover:translate-x-2 hover:text-accent-2"
+                    className="block py-[0.1em] text-left font-display text-[clamp(1.9rem,4.2vw,3.4rem)] font-semibold uppercase leading-[1.02] tracking-tighter transition-[opacity,transform] duration-300 hover:translate-x-2 hover:text-accent-2"
                     initial={{ y: '105%' }}
                     animate={{ y: 0 }}
                     exit={{ y: '105%' }}
